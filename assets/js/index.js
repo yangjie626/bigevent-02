@@ -32,12 +32,12 @@ function getUserlist() {
 function renderAvatar(user) {
     var name = user.nickname || user.username;
     $('#welcome').html('欢迎' + name)
-    var text = name[0].toUpperCase()
     if (user.user_pic !== null) {
         // 有照片
         $('.text-avatar').hide()
         $('.layui-nav-img').show().attr('src', user.user_pic)
     } else {
+        var text = name[0].toUpperCase()
         $('.text-avatar').show().html(text)
         $('.layui-nav-img').hide()
     }
