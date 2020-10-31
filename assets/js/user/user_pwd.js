@@ -27,7 +27,7 @@ $(function() {
                     return layui.layer.msg(res.message)
                 }
                 layui.layer.msg(res.message);
-
+                $(this)[0].reset()
             }
         })
     })
